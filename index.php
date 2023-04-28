@@ -13,10 +13,23 @@
 			<h1>connecting to database in REST API + CRUD SYSTEMS</h1>
 	    	<p>fast response system | система быстрого реагирования</p>
 		</div>
+<br><hr><br>
+		<div class="contain-header-x">
+			<h2>интерессный сайт по добовлению какого то контента</h2>
+	    	<p>добовлять можно всякие вещи</p>
+		</div>
 
 	</header>
 	<div class="content">
 		
+		<div class="crud">
+			blur - window
+			form here
+			routes
+			send post 
+		</div>
+
+
 	</div>
 	<footer>
 		
