@@ -29,8 +29,8 @@
 	}
 	to {
 		background-image: url('../images/imagecompressor/sda.jpg');
- 		border-bottom-left-radius: 60px;
-    	border-bottom-right-radius: 60px;
+ 		border-bottom-left-radius: 30px;
+    	border-bottom-right-radius: 30px;
 	}
 }
 
@@ -39,16 +39,16 @@ header {
 	transition: 1s ease all;
 	animation-name: showImagen;
 	animation-duration: 5s;
-	width: 100%;
+
 	height: 300px;
 	background-image: url('../images/imagecompressor/sda.jpg');
     background-repeat: no-repeat;
     background-position-y: 25%;
     background-color: #a5a54f;
     box-shadow: 1px 4px 10px black;
-    margin-bottom: 20px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    margin: 0 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     animation-iteration-count: ease-in-out;
 }
 .linespace {
@@ -66,15 +66,38 @@ header {
 	text-align: center;
 	font-weight: 100;
 }
-.contain-header-x h2 { font-weight: 100; margin-bottom: 20px; }
-
+.contain-header-x h2 { font-weight: 100; margin-bottom: 20px; color: yellow; }
+.contain-header-x p { color: #F6FFDE; }
+.section {  
+	background-image: url('../images/imagecompressor/f3.jpg');
+	background-position-y: 25%;
+	background-size: cover;
+	background-color: grey;
+	margin: 50px;
+	padding: 50px;}
+	.section h2 { color: #FFA559; border-bottom: 2px solid #9CA777; width: 200px; margin-bottom: 10px;}
+    .section p { color: #FFE6C7; }
+    .section span { color: #F6BA6F; cursor: pointer;}
+    .section span:hover { color: white; }
+    .section b { color: white; font-size: 13px; color: #393646;} 
+    .mini-text { font-size: 18px; font-weight: 100; border-bottom: 1px solid white;}
+    .mini-text p { color: white; }
 .content {
 	height: 1000px;
-	background-image: url('../images/imagecompressor/f4.jpg');
+	background-image: url('../images/imagecompressor/f8.jpg');
     background-repeat: no-repeat;
-    background-position: contain;
-    padding: 20px;
+    background-size: cover;
     margin: 20px;
+}
+
+.backg-filter {
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(30px);
+	color: red;
+}
+.crud {
+	color: black;
 }
 
 /*body {}*/
@@ -89,6 +112,10 @@ header {
 }
 
 @media (max-width: 400px) {
+	.mob-i {
+		padding: 10px;
+		background: rgba(136, 136, 136, 0.8)
+	}
 	.contain-header h1 {
 		font-weight: 100px;
 		font-size: 11px;}
@@ -107,6 +134,10 @@ header {
 }
 /*sorry for DRY*/
 @media (min-width: 401px) and (max-width: 600px) {
+	.mob-i {
+		padding: 10px;
+		background: rgba(136, 136, 136, 0.8)
+	}
 	.contain-header h1 {
 		font-weight: 100px;
 		font-size: 17px;}
