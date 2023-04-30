@@ -15,6 +15,10 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+/*html { overflow: hidden; }*/
+
+
+
 @keyframes showImagen {
 	from {
 		opacity: 0;
@@ -54,12 +58,14 @@ header {
 
 
 .wrapper-puppop {
+	display: none!important;
 	opacity: 0.8;
 	z-index: 1;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	background: silver;
+
 }
 
 .container-pop {
