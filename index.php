@@ -7,6 +7,14 @@
 	<link rel="stylesheet" href="/root/css/main.css">
 </head>
 <body>
+
+    <div class="wrapper-puppop">
+    	<div class="pop-get"></div>
+    	<div class="pop-post"></div>
+    	<div class="pop-put"></div>
+    	<div class="pop-del"></div>
+    </div>
+
 	<header>
 		<div class="linespace"></div>
 		<div class="contain-header">
