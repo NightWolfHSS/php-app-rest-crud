@@ -9,10 +9,20 @@
 <body>
 
     <div class="wrapper-puppop">
-    	<div class="pop-get"></div>
-    	<div class="pop-post"></div>
-    	<div class="pop-put"></div>
-    	<div class="pop-del"></div>
+    	<div class="container-pop">
+    		<div class="pop-get">
+    			<p>метод GET - для получения данных </p>
+    		</div>
+	   <!--  	<div class="pop-post">
+	    		<p>метод GET - для получения данных </p>
+	    	</div>
+	    	<div class="pop-put">
+	    		<p>метод GET - для получения данных </p>
+	    	</div>
+	    	<div class="pop-del">
+	    		<p>метод GET - для получения данных </p>
+	    	</div> -->
+    	</div>
     </div>
 
 	<header>
