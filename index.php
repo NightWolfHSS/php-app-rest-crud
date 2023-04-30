@@ -10,17 +10,18 @@
 <body>
 
     <div class="wrapper-puppop">
+    	<div class="clsd"><p>закрыть</p></div>
     	<div class="container-pop">
-    		<div class="pop-get">
+    		<div class="pop-get xget-с">
     			<p>метод GET - для получения данных </p>
     		</div>
-	    	<div class="pop-post">
+	    	<div class="pop-post xpost-c">
 	    		<p>метод GET - для получения данных </p>
 	    	</div>
-	    	<div class="pop-put">
+	    	<div class="pop-put xput-c">
 	    		<p>метод GET - для получения данных </p>
 	    	</div>
-	    	<div class="pop-del">
+	    	<div class="pop-del xdel-c">
 	    		<p>метод GET - для получения данных </p>
 	    	</div>
     	</div>
