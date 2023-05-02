@@ -13,16 +13,20 @@
     	<div class="clsd"><p>закрыть</p></div>
     	<div class="container-pop">
 	    	<div class="pop-post xpost-c">
-	    		<p>метод POST - для отправки в базу данных</p>
+	    		<p>метод POST - для отправки в базу данных</p><br>
+	    		<i>по хорошему написать бы псевдокод</i>
 	    	</div>
 	    	<div class="pop-get xget-c">
     			<p>метод GET - для получения данных </p>
+    			<i>по хорошему написать бы псевдокод</i>
     		</div>
 	    	<div class="pop-put xput-c">
-	    		<p>метод PUT - для изменения / редактирования данныз </p>
+	    		<p>метод PUT - для изменения / редактирования данных </p>
+	    		<i>по хорошему написать бы псевдокод</i>
 	    	</div>
 	    	<div class="pop-del xdel-c">
 	    		<p>метод DELETE - для удаление данных </p>
+	    		<i>по хорошему написать бы псевдокод</i>
 	    	</div>
     	</div>
     </div>
@@ -56,7 +60,11 @@
     	</section>
     </div>
 
+
+    
 	<div class="content">
+
+		<!-- раздели блок на одном форма на другом картинка с пояснением и так все 4 блока на методы -->  
 		<div class="backg-filter content-wrapper">
 			<div class="crud">
 				blur - window
@@ -65,6 +73,7 @@
 				send post 
 			</div>
 		</div>
+
 	</div>
 
 	<footer>
