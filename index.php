@@ -12,17 +12,17 @@
     <div class="wrapper-puppop">
     	<div class="clsd"><p>закрыть</p></div>
     	<div class="container-pop">
-    		<div class="pop-get xget-с">
+	    	<div class="pop-post xpost-c">
+	    		<p>метод POST - для отправки в базу данных</p>
+	    	</div>
+	    	<div class="pop-get xget-c">
     			<p>метод GET - для получения данных </p>
     		</div>
-	    	<div class="pop-post xpost-c">
-	    		<p>метод GET - для получения данных </p>
-	    	</div>
 	    	<div class="pop-put xput-c">
-	    		<p>метод GET - для получения данных </p>
+	    		<p>метод PUT - для изменения / редактирования данныз </p>
 	    	</div>
 	    	<div class="pop-del xdel-c">
-	    		<p>метод GET - для получения данных </p>
+	    		<p>метод DELETE - для удаление данных </p>
 	    	</div>
     	</div>
     </div>
@@ -42,9 +42,15 @@
 
     <div class="section">
     	<section class="mob-i">
-	    <h2>Хороший язык : </h2>
+	       <h2>Хороший язык : </h2>
 		   <p>PHP это очень хороший язык - для работы с протоколами http / https ... в данном случае мы будем использовать методы для работы с данными <br>
-		   	<b><span class="xget" title="данный метод используется для добовления данных">POST</span> | <span title="данный метод используется для получения данных">GET</span> | <span title="данный метод используется для изменения данных">PUT</span> | <span title="данный метод используется для удаления данных">DELETE</span> </b></p>
+		   	<b>
+		   	<span class="x-click xpost" title="данный метод используется для добовления данных">POST</span> |
+		   	<span class="x-click xget" title="данный метод используется для получения данных">GET</span> |
+		   	<span class="x-click xput" title="данный метод используется для изменения данных">PUT</span> |
+		   	<span class="x-click xdel" title="данный метод используется для удаления данных">DELETE</span>
+		
+		   	</b></p>
 		   	<br>	
 		   	<div class="mini-text"><p>наведи что бы узнать о методе</p></div>
     	</section>

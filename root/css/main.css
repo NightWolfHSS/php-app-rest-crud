@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');*/
 /*default settings or hardreset*/
 * { 
 	font-family: 'Roboto', sans-serif ;
@@ -76,7 +76,7 @@ header {
 }
 
 .pop-get, .pop-post, .pop-put, .pop-del {
-	display: block;
+    display: none;
 	border: 3px solid silver;
 	min-height: 200px;
 	min-width: 200px;
@@ -88,7 +88,7 @@ header {
 .pop-get { display: none; }
 .pop-post { display: none;  }
 .pop-put { display: none;  }
-.pop-del {  }
+.pop-del { display: none; }
 
 .linespace {padding: 30px 0;}
 .contain-header {
@@ -117,12 +117,11 @@ header {
     .section b { color: white; font-size: 13px; color: #393646;} 
     .mini-text { font-size: 18px; font-weight: 100; border-bottom: 1px solid white;}
     .mini-text p { color: white; }
+
 .content {
+	background: silver;
 	height: 1000px;
-	background-image: url('../images/imagecompressor/f8.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 20px;
+    width: 100%;
 }
 
 .backg-filter {
