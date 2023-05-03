@@ -14,11 +14,16 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+::-webkit-scrollbar {
+display: none;
+}
 
 /*html { overflow: hidden; }*/
 
 
-
+body {
+	background-image: url('../images/imagecompressor/f4.jpg');
+}
 @keyframes showImagen {
 	from {
 		opacity: 0;
@@ -28,7 +33,7 @@
 	}
 	50% {
 		opacity: 1;
-		background-image: url('../images/imagecompressor/sda.jpg');
+		background-image: url('../images/imagecompressor/f4.jpg');
         background-position-y: 45%;
 	}
 	to {
@@ -77,6 +82,7 @@ i { font-size: 12px; }
 .line { border: 1px solid #FFD95A; color: #FFD95A; }
 .smooth { font-size: 14px!important; color: #FFF7D4!important; font-weight: 100;}
 .pop-get, .pop-post, .pop-put, .pop-del {
+	overflow-y: auto;
 	border: 3px solid silver;
 	max-height: 400px;
 	max-width: 400px;
@@ -104,10 +110,7 @@ i { font-size: 12px; }
 .contain-header-x h2 { font-weight: 100; margin-bottom: 20px; color: yellow; }
 .contain-header-x p { color: #F6FFDE; }
 .section {  
-	background-image: url('../images/imagecompressor/f3.jpg');
-	background-position-y: 25%;
-	background-size: cover;
-	background-color: grey;
+	background-color: #4448abe3;
 	margin: 50px;
 	padding: 50px;}
 	.section h2 { color: #FFA559; border-bottom: 2px solid #9CA777; width: 200px; margin-bottom: 10px;}
@@ -118,7 +121,7 @@ i { font-size: 12px; }
     .mini-text { font-size: 18px; font-weight: 100; border-bottom: 1px solid white;}
     .mini-text p { color: white; }
     .mono { background: white; }
-.mini-t { color: #212A3E;}
+.mini-t { color: #2A2F4F;}
 .content {
 	background: silver;
 	height: 1000px;
