@@ -14,11 +14,35 @@
     	<div class="container-pop">
 	    	<div class="pop-post xpost-c">
 	    		<p>метод POST - для отправки в базу данных</p><br>
-	    		<i>по хорошему написать бы псевдокод</i>
+	    		<b class="smooth">
+	    			<i>HTML: форма отправки данных методом post</i>
+	    			<hr class="line">
+	    			<br>
+	    			<pre><code>&lt;form action=&quot;welcome.php&quot; method=&quot;post&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;
+&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+					<br> 
+					<i>PHP: проверка на существование значений и отправка</i>
+					<hr class="line"><br>
+					<pre><code>if(isset($_POST['submit']) 
+   {
+      echo(&quot;First name: &quot; . $_POST['firstname'] . &quot;&lt;br /&gt;\\n&quot;);
+      echo(&quot;Last name: &quot; . $_POST['lastname'] . &quot;&lt;br /&gt;\\n&quot;);
+   }</code></pre>
+
+				</b>
 	    	</div>
+
 	    	<div class="pop-get xget-c">
     			<p>метод GET - для получения данных </p>
     			<i>по хорошему написать бы псевдокод</i>
+    			<b class="smooth">
+    					<pre><code>// and &quot; <span style="color: orangered;">welcome_get.php</span> &quot; looks like this:
+Welcome &lt;?php echo $_GET[&quot;name&quot;]; ?&gt;&lt;br&gt;
+Your email address is: &lt;?php echo $_GET[&quot;email&quot;]; ?&gt;</code></pre>
+    			</b>
     		</div>
 	    	<div class="pop-put xput-c">
 	    		<p>метод PUT - для изменения / редактирования данных </p>
@@ -46,7 +70,7 @@
 
     <div class="section">
     	<section class="mob-i">
-	       <h2>Хороший язык : </h2>
+	       <h2>Хороший инструмент : </h2>
 		   <p>PHP это очень хороший язык - для работы с протоколами http / https ... в данном случае мы будем использовать методы для работы с данными <br>
 		   	<b>
 		   	<span class="x-click xpost" title="данный метод используется для добовления данных">POST</span> |
@@ -56,7 +80,12 @@
 		
 		   	</b></p>
 		   	<br>	
-		   	<div class="mini-text"><p>наведи что бы узнать о методе</p></div>
+		   	<div class="mini-text"><p>нажми на метод что бы узнать посмотреть код</p>
+		   		<div class="mono">
+		   			<i class="mini-t">*дальше мы будем проводить с ними операции</i><br>
+		  		 	<i class="mini-t">*но для этого нужно узнать как это работает из под 'коробки'</i>
+		   		</div>
+		   	</div>
     	</section>
     </div>
 

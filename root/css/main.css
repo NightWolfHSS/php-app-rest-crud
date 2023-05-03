@@ -74,6 +74,8 @@ i { font-size: 12px; }
 	align-items: center;
 	justify-content: center;
 }
+.line { border: 1px solid #FFD95A; color: #FFD95A; }
+.smooth { font-size: 14px!important; color: #FFF7D4!important; font-weight: 100;}
 .pop-get, .pop-post, .pop-put, .pop-del {
 	border: 3px solid silver;
 	max-height: 400px;
@@ -115,7 +117,8 @@ i { font-size: 12px; }
     .section b { color: white; font-size: 13px; color: #393646;} 
     .mini-text { font-size: 18px; font-weight: 100; border-bottom: 1px solid white;}
     .mini-text p { color: white; }
-
+    .mono { background: white; }
+.mini-t { color: #212A3E;}
 .content {
 	background: silver;
 	height: 1000px;
