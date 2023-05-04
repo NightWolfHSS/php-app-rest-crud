@@ -118,12 +118,15 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 
 		<!-- раздели блок на одном форма на другом картинка с пояснением и так все 4 блока на методы -->  
 		<div class="backg-filter content-wrapper">
-			<div class="crud">
-				blur - window
-				form here
-				routes
-				send post 
+			<h4 class="h-text">Мы используем грид (хотя можем и флексы и BOOTSTRAP 3, 4)</h4>
+			<!-- post get put delete в каждом блоке -->
+			<div class="crud examp1">
+				<div class="box_post_one">
+					тут какое то пояснение и картитнка 
+				</div>
+				<div class="box_post_two">второй блок</div>
 			</div>
+
 		</div>
 
 	</div>
