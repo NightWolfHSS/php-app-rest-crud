@@ -110,6 +110,7 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 		   		</div>
 		   	</div>
     	</section>
+    	<section class="mob-i compres"></section>
     </div>
 
 
@@ -118,12 +119,57 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 
 		<!-- раздели блок на одном форма на другом картинка с пояснением и так все 4 блока на методы -->  
 		<div class="backg-filter content-wrapper">
-			<h4 class="h-text">Мы используем грид (хотя можем и флексы и BOOTSTRAP 3, 4)</h4>
 			<!-- post get put delete в каждом блоке -->
+
+			<section class="h-text">
+				<h3>Отправить что то по методу post</h3>
+				<p>Для этого нам понадобится форма</p>
+			</section>
+
 			<div class="crud examp1">
 				<div class="box_post_one">
 					тут какое то пояснение и картитнка 
 				</div>
+				<div class="line-decore"></div>
+				<div class="box_post_two">второй блок</div>
+			</div>
+
+			<section class="h-text">
+				<h3>Получить данные:</h3>
+				<p>Воспльзуемся методом get</p>
+			</section>
+
+			<div class="crud examp2">
+				<div class="box_post_one">
+					тут какое то пояснение и картитнка 
+				</div>
+				<div class="line-decore"></div>
+				<div class="box_post_two">второй блок</div>
+			</div>
+
+			<section class="h-text">
+				<h3>Отправить что то по методу post</h3>
+				<p>Для этого нам понадобится форма</p>
+			</section>
+
+			<div class="crud examp1">
+				<div class="box_post_one">
+					тут какое то пояснение и картитнка 
+				</div>
+				<div class="line-decore"></div>
+				<div class="box_post_two">второй блок</div>
+			</div>
+
+			<section class="h-text">
+				<h3>Отправить что то по методу post</h3>
+				<p>Для этого нам понадобится форма</p>
+			</section>
+
+			<div class="crud examp1">
+				<div class="box_post_one">
+					тут какое то пояснение и картитнка 
+				</div>
+				<div class="line-decore"></div>
 				<div class="box_post_two">второй блок</div>
 			</div>
 
@@ -132,10 +178,32 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 	</div>
 
 	<footer>
-		
+		<!-- company oo too mail telegramm LOGO -->
+		<!-- <h4 class="h-text">Мы используем грид (хотя можем и флексы и BOOTSTRAP 3, 4)</h4> -->
+		<!-- инструменты https://grid.malven.co/ -->
+		<!-- opensource github -->
+		<h5><span>theme: </span>Творический лес</h5>
+		<div class="foo-wrapper">
+			<section>
+				<li><a href="#">asdasd</a></li>
+				<li><a href="#">asdasd</a></li>
+				<li><a href="#">asdasd</a></li>
+			</section>
+			<section>
+				<li><a href="#">asdasd</a></li>
+				<li><a href="#">asdasd</a></li>
+				<li><a href="#">asdasd</a></li>
+			</section>
+			<section>
+				<li><a href="#">asdasd</a></li>
+				<li><a href="#">asdasd</a></li>
+				<li><a href="#">asdasd</a></li>
+			</section>
+		</div>
 	</footer>
 </body>
 </html>
+
 <!-- 
 создать документацию по установки на локалку или опенсервер
 документация по созданию данных по умолчанию 
