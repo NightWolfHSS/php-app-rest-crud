@@ -51,4 +51,16 @@ $data = [1, 'audi', 'bmw', 'mercedes', 'vw', 2, 10];
 $left = 2;
 $right = 2;
 $mid = ($left + $right) / 2;
-echo $mid;
+// echo $mid; 2
+
+// just test code 
+
+function hhvar() 
+{
+    $a = 'everythere';
+    // you need the value of another variable - to see the result
+    $hello = 'good day';
+    $everythere = 'one of ';
+    echo $$a;
+}
+hhvar();

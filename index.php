@@ -128,7 +128,9 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 
 			<div class="crud examp1">
 				<div class="box_post_one">
-					тут какое то пояснение и картитнка 
+					<form action="">
+						<input type="text">
+					</form>
 				</div>
 				<div class="line-decore"></div>
 				<div class="box_post_two">второй блок</div>
