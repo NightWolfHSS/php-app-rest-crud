@@ -55,12 +55,44 @@ $mid = ($left + $right) / 2;
 
 // just test code 
 
-function hhvar() 
+
+function test_code_vv() 
 {
-    $a = 'everythere';
-    // you need the value of another variable - to see the result
-    $hello = 'good day';
-    $everythere = 'one of ';
-    echo $$a;
+  $age = 'age = 21';
+  $static = 'age';
+  return $$static;
 }
-hhvar();
+$voice = test_code_vv();
+
+$res_space = preg_replace("/[^0-9]/", "", $voice);
+// echo $res_space; number
+// echo test_code_vv(); string
+
+// href an variable
+// $x = 'y';
+// $y = 'x';
+// echo $$x;
+
+// href variable
+// $fox = 5;
+// $axe = $fox;
+// echo $axe;
+
+// use operations
+// $x = 50;
+// $x *= 100;
+// echo $x;
+
+// type or value | bool
+$x = 1; 
+$y = 0;
+// $res = $x === $y;
+// // echo $x == $y; // false | 0
+// echo $res; // false | 0
+// echo $town = $x <> $y; // true 
+// echo $town = $x != $y; // true
+// echo $city = $x !== $y; // false
+// echo $city = $x > $y; // true
+// echo $city = $y > $x; // false
+// echo $city = $y >= $x; // false
+// echo $city = $y <= $x; // true

@@ -81,7 +81,7 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 		<div class="linespace"></div>
 		<div class="contain-header">
 			<h1>connecting to database in REST API + CRUD SYSTEMS</h1>
-	    	<p>fast response system | система быстрого реагирования</p>
+	    	<p>fast re\s\s\sp sponse system | система быстрого реагирования</p>
 		</div>
 		<br><hr><br>
 		<div class="contain-header-x">
