@@ -84,8 +84,8 @@ $res_space = preg_replace("/[^0-9]/", "", $voice);
 // echo $x;
 
 // type or value | bool
-$x = 1; 
-$y = 0;
+$x = 0; 
+$y = 1;
 // $res = $x === $y;
 // // echo $x == $y; // false | 0
 // echo $res; // false | 0
@@ -96,3 +96,17 @@ $y = 0;
 // echo $city = $y > $x; // false
 // echo $city = $y >= $x; // false
 // echo $city = $y <= $x; // true
+
+// $res = $x or $y; true
+// $res = $x and $y; true
+// $res = $x xor $y; true
+// $res = $x && $y; false
+// $res = $x || $y; true
+// $res = !$x; true
+// $num1 = 6; $num2 = 3;
+// $res = $num1 > 1 && $num2 < $num1; // true
+// $a=2; $b=$a++;
+
+// $foxTime = 22; 
+// $foxTime++; // echo $foxTime; inc 23
+
