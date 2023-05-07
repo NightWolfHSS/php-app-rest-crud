@@ -20,7 +20,7 @@ display: none;
 
 /*html { overflow: hidden; }*/
 
-
+html { z-index: 1; }
 body {
 	background-image: url('../images/imagecompressor/f4.jpg');
 	background-attachment: fixed;
@@ -150,18 +150,42 @@ i { font-size: 12px; }
 	margin: 10px 50px;
 	padding: 10px;
 }
-.box_post_one, .box_post_two { height: 500px; border-radius: 20px; padding: 20px;}
+.box_post_one, .box_post_two, .box_post_two_1 { height: 500px; border-radius: 20px; padding: 20px;}
+.box_post_two_1 { background: white; color: black;}
+.box_post_two_1 p { color: black!important; }
+.box_post_two_1 h3 { color: black!important; }
+.wrapper-form-exm1 { background: orange; border-radius: 21px;
+	background-image: url('../images/imagecompressor/dor.jpg'); position: relative; z-index: 8; }
+.chain_form {
+	background: #12c2e9;
+    background: -webkit-linear-gradient(to left, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to left, #f64f59fa, #c471ed, #12c2e9eb); 
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	position: relative;
+	z-index: 9;
+}
+.chain_form form {
+	border-radius: 10px;
+	padding: 20px;
+	background: #0C134F;
+}
+.chain_form form input { display: block; padding: 5px; outline: none; border: none; background: white; color: #0C134F; margin: 5px 0; font-weight: bold;}
+.chain_form form button { background: black; color: white; border-radius: 10px; padding: 10px; border: none; margin-top: 10px; cursor: pointer; }
+.chain_form form button:hover { background: orangered; }
+
+
 .content-wrapper {
-		
 	padding: 50px 0;
 	background: #ff9966;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-.box_post_one {
+/*.box_post_one {
 	background: #E76161;
-}
+}default*/
 .box_post_two {
 	background: #B04759;
 }

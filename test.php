@@ -110,3 +110,53 @@ $y = 1;
 // $foxTime = 22; 
 // $foxTime++; // echo $foxTime; inc 23
 
+// ARRAYS
+// $name1 = 'David';
+// $name2 = 'Slavik';
+// $name3 = 'Kaptain Hook';
+// // var_dump($name1, $name2, $name3);
+
+// // numbers array | index begin = 1 
+// $names = array('David', 'Slavik', 'Kaptain Hook');
+// // var_dump($names); you can see index
+// // ALT
+// $names[0] = 'David';
+// $names[1] = 'Slavik';
+// $names[2] = 'Kaptain hook';
+
+// // var_dump($names[2]);
+
+// $mixArr[0] = "Slavik";
+// $mixArr[1] = "<strong>PHP</strong>";
+// $mixArr[2] = 25;
+// echo "$mixArr[0] is $mixArr[2] and knows $mixArr[1]";
+
+// RELATIONS ARRAYS
+// $people = array(
+//     'David' => '21',
+//     'Amy'   => '13',
+//     'Kaptain' => '40'
+// );
+// // var_dump($people['Kaptain']);
+// // or
+// $people['David'] = '21';
+// $people['Amy'] = '13';
+// $people['Kaptain'] = '40';
+// var_dump($people['David']);
+
+// multidimensional arrays
+// $people = array(
+//   'online' => array('David', 'Ami'),
+//   'offline' => array('John', 'Rob'),
+//   'away'   => array('Arthur', 'Daniel')
+// );
+// echo $people['online'][0];
+// echo $people['offline'][1];
+
+// $items = array('box', 'irtems', 'goodlich');
+// var_dump($items);
+// $c = 'b';
+// $b = 'a';
+// $a = 'c';
+// $item = $$c=$$b;
+// echo $$b;

@@ -81,7 +81,7 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 		<div class="linespace"></div>
 		<div class="contain-header">
 			<h1>connecting to database in REST API + CRUD SYSTEMS</h1>
-	    	<p>fast re\s\s\sp sponse system | система быстрого реагирования</p>
+	    	<p>fast response system | система быстрого реагирования</p>
 		</div>
 		<br><hr><br>
 		<div class="contain-header-x">
@@ -127,13 +127,20 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			</section>
 
 			<div class="crud examp1">
-				<div class="box_post_one">
-					<form action="">
-						<input type="text">
-					</form>
+				<div class="wrapper-form-exm1">
+					<div class="box_post_one chain_form">
+						<form action="">
+							<input type="text" placeholder="work - работа">
+							<input type="text" placeholder="name - имя">
+							<button type="submit">Отправить</button>
+						</form>
+					</div>
 				</div>
 				<div class="line-decore"></div>
-				<div class="box_post_two">второй блок</div>
+				<div class="box_post_two_1">
+					<h3>отправка</h3>
+					<p>отправка данных и получение ответа:</p>
+				</div>
 			</div>
 
 			<section class="h-text">
