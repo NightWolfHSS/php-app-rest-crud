@@ -85,9 +85,11 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 		</div>
 		<br><hr><br>
 		<div class="contain-header-x">
-			<h2>интерессный сайт по добовлению какого то контента</h2>
-	    	<p>добовлять можно всякие вещи</p>
+	    	<div class="logo">
+				<img src="/root/images/logo/logo3.png" alt="logo">
+			</div>
 		</div>
+		
 	</header>
 
     <div class="section">
@@ -198,6 +200,9 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 		<!-- <h4 class="h-text">Мы используем грид (хотя можем и флексы и BOOTSTRAP 3, 4)</h4> -->
 		<!-- инструменты https://grid.malven.co/ -->
 		<!-- opensource github -->
+	    <div class="logo">
+			<img src="/root/images/logo/logo2.png" alt="logo">
+		</div>
 		<h5><span>theme: </span>Творический лес</h5>
 		<div class="foo-wrapper">
 			<section>
