@@ -139,9 +139,9 @@ i { font-size: 12px; }
     width: 100%;
     height: auto;
 }
-.h-text  { margin: 50px 60px; font-weight: 100!important; font-size: 30px;  border-radius: 20px; padding: 20px; }
-.h-text h3 {font-weight: bold;}
-.h-text p { font-family: calibri; font-weight: 100; font-size: 19px!important; }
+.h-text  { margin: 50px 60px; font-size: 30px;  padding: 20px;}
+.h-text h3 {font-weight: bold; color: #f2c94c;}
+.h-text p { font-family: calibri; font-weight: 100; font-size: 19px!important; color: #f2c94c; }
 
 .crud {
 	display: grid;
@@ -157,9 +157,9 @@ i { font-size: 12px; }
 .wrapper-form-exm1 { background: orange; border-radius: 21px;
 	background-image: url('../images/imagecompressor/dor.jpg'); position: relative; z-index: 8; }
 .chain_form {
-	background: #12c2e9;
-    background: -webkit-linear-gradient(to left, #f64f59, #c471ed, #12c2e9);
-    background: linear-gradient(to left, #f64f59fa, #c471ed, #12c2e9eb); 
+	background: #F2994A;
+    background: -webkit-linear-gradient(to bottom, #F2C94C, #F2994A);
+    background: linear-gradient(to bottom, #f2c94c, #f2994af5);
 	display: grid;
 	justify-items: center;
 	align-items: center;
@@ -169,18 +169,34 @@ i { font-size: 12px; }
 .chain_form form {
 	border-radius: 10px;
 	padding: 20px;
-	background: #0C134F;
+	background: #4C3D3D;
+	border-bottom: 2px solid orangered;
 }
-.chain_form form input { display: block; padding: 5px; outline: none; border: none; background: white; color: #0C134F; margin: 5px 0; font-weight: bold;}
+.chain_form form input { display: block; padding: 5px; outline: none; border: 1px solid #4C3D3D; background: white; color: #4C3D3D; margin: 10px 0; font-weight: bold; border-radius: 10px; }
 .chain_form form button { background: black; color: white; border-radius: 10px; padding: 10px; border: none; margin-top: 10px; cursor: pointer; }
 .chain_form form button:hover { background: orangered; }
+
+.space-loader {
+	padding-left: 5px; font-size: 10px;}
+   .dot { display: inline-block;  margin-top: 10px;  }
+	/*не стал использовать вебкиды префиксы для демонстрации толко*/
+	div.r-dot li, div.b-dot li, div.c-dot li {transition: all 1s ease;}
+	div.r-dot li  { color: orange; transition-delay: 1.5s; }
+	dir.b-dot li { transition-delay: 0.5s; }
+	div.c-dot li { transition-delay: 1s;}
+
+    .chain_form form:hover div.r-dot li { color: silver; } 
+    .chain_form form:hover div.b-dot li { color: orange; }
+    .chain_form form:hover div.c-dot li { color: orangered; }
+
 
 
 .content-wrapper {
 	padding: 50px 0;
-	background: #ff9966;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #42275a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 /*.box_post_one {

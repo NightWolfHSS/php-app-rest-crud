@@ -129,10 +129,17 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			<div class="crud examp1">
 				<div class="wrapper-form-exm1">
 					<div class="box_post_one chain_form">
-						<form action="">
-							<input type="text" placeholder="work - работа">
-							<input type="text" placeholder="name - имя">
+						<form action="#" method="post">
+							<input required type="text" name="work" placeholder="work - работа">
+							<input required type="text" name="name" placeholder="name - имя">
+							<input required type="text" name="cat" placeholder="есть кот ?">
+							<input required type="text" name="dog" placeholder="есть собака ?">
 							<button type="submit">Отправить</button>
+							<div class="space-loader">
+								<div class="dot r-dot"><li><i></i></li></div>
+								<div class="dot b-dot"><li><i></i></li></div>
+								<div class="dot c-dot"><li><i></i></li></div>
+							</div>
 						</form>
 					</div>
 				</div>
