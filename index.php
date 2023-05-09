@@ -126,6 +126,8 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			<section class="h-text">
 				<h3>Отправить что то по методу post</h3>
 				<p>Для этого нам понадобится форма</p>
+				<i>Важно отметить: Здесь нет подготовленных запросов и <span style="color: orangered;">сырые запросы</span> отправлять без проверки опасно потому что возможна sql иньекция что моглобы превести к потере, краже, манипуляции получения прав доступа к важным ресурсам - в БАЗЕ ДАННЫХ</i>
+				<p>PHP есть функция для "приготовления" запросов  <span style="color:orangered">prepare()</span></p>
 			</section>
 
 			<div class="crud examp1">
@@ -200,27 +202,78 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 		<!-- <h4 class="h-text">Мы используем грид (хотя можем и флексы и BOOTSTRAP 3, 4)</h4> -->
 		<!-- инструменты https://grid.malven.co/ -->
 		<!-- opensource github -->
-	    <div class="logo">
-			<img src="/root/images/logo/logo2.png" alt="logo">
-		</div>
-		<h5><span>theme: </span>Творический лес</h5>
+	    <div class="logo logo-center">
+			<img src="/root/images/logo/logo3.png" alt="logo">
+		</div><br>
 		<div class="foo-wrapper">
 			<section>
-				<li><a href="#">asdasd</a></li>
-				<li><a href="#">asdasd</a></li>
-				<li><a href="#">asdasd</a></li>
+				<li><a href="#">Регионы</a></li>
+				<li><a href="#">Дизайн</a></li>
+				<li><a href="#">Рецепты</a></li>
 			</section>
 			<section>
-				<li><a href="#">asdasd</a></li>
-				<li><a href="#">asdasd</a></li>
-				<li><a href="#">asdasd</a></li>
+				<li><a href="#">Карты</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#">Партнеры</a></li>
 			</section>
 			<section>
-				<li><a href="#">asdasd</a></li>
-				<li><a href="#">asdasd</a></li>
-				<li><a href="#">asdasd</a></li>
+				<li><a href="#">Команда</a></li>
+				<li><a href="#">html</a></li>
+				<li><a href="#">css</a></li>
 			</section>
 		</div>
+		<div class="tags-skils">
+			<h3>Технологии которые есть в данном приложении:</h3>
+		</div>
+		<div class="foo-wrapper">
+			<section>
+				<li><p>HTML(5)</p></li>
+				<li><p>CSS(3)</p></li>
+				<li><p>GRID</p></li>
+			</section>
+			<section>
+				<li><p>JavaScript</p></li>
+				<li><p>SQL</p></li>
+				<li><p>PHP</p></li>
+			</section>
+		</div>
+		<div class="tags-skils">
+			<h3>Технологии которые использую:</h3>
+		</div>
+		<div class="foo-wrapper">
+			<section class="sil">
+				<li><p>HTML</p></li>
+				<li><p>CSS</p></li>
+				<li><p>GRID</p></li>
+				<li><p>FLEX</p></li>
+				<li><p>Bootstrap</p></li>
+				<li><p>JavaScript</p></li>
+			</section>
+			<section class="sil">
+				<li><p>SQL</p></li>
+				<li><p>MariaDB</p></li>
+				<li><p>Psql</p></li>
+				<li><p>Mysql</p></li>
+			</section>
+			<section class="sil">
+				<li><p>PHP</p></li>
+			    <li><p>Laravel</p></li>
+			    <li><p>WordPress</p></li>
+			    <li><p>Native CMS</p></li>
+			</section>
+		</div>
+		<div class="tags-skils">
+			<h3>Архитектура и принципы:</h3>
+		</div>
+		<div class="foo-wrapper">
+			<section class="sil">
+				<li><p>MVC</p></li>
+			    <li><p>SOLID</p></li>
+			    <li><p>OOP</p></li>
+			    <li><p>DRY</p></li>
+			</section>
+		</div><br>
+		<h5><span>theme: </span>Творический лес</h5>
 	</footer>
 </body>
 </html>
