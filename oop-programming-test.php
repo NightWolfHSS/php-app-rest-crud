@@ -175,10 +175,17 @@ class Test
 		return $this->move;
 	}
 
+	private function testP()
+	{
+		echo "это приватный метод и ты его просто так видеть не должен";
+	}
+
 }
 
 class Pi extends Test
 {
+
+	private $fox;
 	public function getName($move)
 	{
 		parent::engine($move); 
@@ -213,13 +220,27 @@ class Pi extends Test
 	{
 		return $this->xpTest('точно в цель');
 	}
+
+	private function getTestResult()
+	{
+		return 'name is not defined';
+	}
+
+	public function getTestPrivateMethod()
+	{
+		return $this->getTestResult();
+	}
 }
 
 
-$test = new Test;
+// $test = new Test;
+// $test->testP(); private
 // echo $test->move;
 
-$pi = new Pi;
+// $pi = new Pi;
+// $pi->default = "2"; private, but you can see the result
+// echo $pi->default; // you can see result
+// $pi->testP(); private
 // echo "hello - I`m " . $pi->getName('slavik') . "<br>";
 // echo $pi->testUseDefaultVarible();
 // echo "<br>";
@@ -229,4 +250,42 @@ $pi = new Pi;
 
 // echo $pi->default = "ура я победил ";
 // $pi->xpTest('sss'); // will error 
-// echo $pi->getXp(); get data
+// echo $pi->getXp(); get data from private method
+// $pi::getTestResult();// error private
+// echo $pi->getTestPrivateMethod();// get result
+
+// *********************
+// encapsulation | type-Hinting begin 7.0.0
+
+class Base 
+{
+	//  доступен для всех
+	private $color = 'null';
+	// метод обьектов 
+	public function inferno(int $fix)
+	{
+		echo $fix;
+	}
+
+ 	public function setColor(string $color)
+ 	{
+ 		$this->color = $color;
+ 	}
+
+	// получим свойство текущего обьекта value
+	public function getColor()
+	{
+		return $this->color;
+	}
+}  
+// $bs = new Base;
+// $bs->inferno('asdasd'); error 
+// $bs->color = 'Red';
+// $bs->setColor('Red'); 
+// echo $bs->getColor();
+// echo $bs->color; private
+// echo $bs->getColor(); и получаем свойство текущего обьекта - класса
+// $bs1 = new Base;
+// $bs1->color = '<br>orange';
+// echo $bs1->color;
+// $bs->inferno();
