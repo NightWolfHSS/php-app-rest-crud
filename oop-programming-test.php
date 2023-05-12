@@ -48,10 +48,10 @@ class People extends AbstrPerson
 	// ...
 }
 
-$app = new People;
-$app->getPerson('slavik'); // run from abstract class
-echo "<br> супер пользователь " . $app->superPersonAdmi('Alex');
-echo "<br> зверюшка " . $app->petsOfPerson('the cat Saimon');
+// $app = new People;
+// $app->getPerson('slavik'); // run from abstract class
+// echo "<br> супер пользователь " . $app->superPersonAdmi('Alex');
+// echo "<br> зверюшка " . $app->petsOfPerson('the cat Saimon');
 
 
 
@@ -93,3 +93,69 @@ foreach($publications as $publication)
 		echo "data is empty";
 	}
 }
+
+
+// OOP inheritance
+// наследование или расширение класса
+// we alse use getter and setter
+
+class Market 
+{
+
+	private $price;
+
+	public function getProduct()
+	{
+		return $this->product;
+	}
+
+	public function setProduct($product) 
+	{
+		$this->product = $product;
+	}
+
+	public function getPrice()
+	{
+		return $this->price;
+	}
+
+	public function setPrice($price)
+	{
+		$this->price = $price;
+	}
+}
+
+
+class Milk extends Market 
+{ 
+	private $name;
+	private $priceMilk;
+
+	public function setNameMilk($name)
+	{
+		$this->name = $name;
+	}
+
+	public function setTestOwn($product)
+	{
+		$this->product = $product;
+	}
+
+    public function getTestOwn()
+    {
+    	return $this->product;
+    }
+
+	public function getNameMilk()
+	{
+		return $this->name;
+	}
+
+	
+}
+
+// $milk = new Milk;
+// $milk->setTestOwn('тут кто то есть');
+// echo $milk->getTestOwn();
+
+

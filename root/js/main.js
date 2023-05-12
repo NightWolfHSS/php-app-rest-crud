@@ -45,4 +45,8 @@ xhide = document.querySelector('.clsd').addEventListener('click', function(e) {
 
 
 
+const baseSumArr = [1,2,3,] + [4,5,6];
+console.log(baseSumArr);
+
+
 
