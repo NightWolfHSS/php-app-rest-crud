@@ -159,3 +159,74 @@ class Milk extends Market
 // echo $milk->getTestOwn();
 
 
+
+
+class Test
+{
+    private $default = 'i like to use single quotes';
+	public $move;
+	public function engine($move)
+	{
+		$this->move = $move;
+	}
+
+	public function getEngine()
+	{
+		return $this->move;
+	}
+
+}
+
+class Pi extends Test
+{
+	public function getName($move)
+	{
+		parent::engine($move); 
+		return parent::getEngine();
+	}
+
+	public function testUseDefaultVarible()
+	{
+		return $this->$default;
+		// hmm why is empty like a mistake?
+		// just Empty
+	}
+
+	public function useDefaultVar($default)
+	{
+		$this->default = $default;
+	}
+
+	public function getDefaultVar()
+	{
+		return $this->default;
+	}
+
+
+	private function xpTest($xp)
+	{
+		return $this->xp = $xp;
+	}
+
+
+	public function getXp()
+	{
+		return $this->xpTest('точно в цель');
+	}
+}
+
+
+$test = new Test;
+// echo $test->move;
+
+$pi = new Pi;
+// echo "hello - I`m " . $pi->getName('slavik') . "<br>";
+// echo $pi->testUseDefaultVarible();
+// echo "<br>";
+// // set value
+// $pi->useDefaultVar('Engine is power');
+// echo $pi->getDefaultVar(); // if empty getting default variable
+
+// echo $pi->default = "ура я победил ";
+// $pi->xpTest('sss'); // will error 
+// echo $pi->getXp(); get data
