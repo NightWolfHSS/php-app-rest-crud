@@ -1,53 +1,5 @@
 <?php 
-// test OOP code
-class Main 
-{
-	private $argx;
-
-    public function __construct($arg) 
-    {
-		$this->getSectret($arg);
-    }
-
-	private function getSectret($argx)
-	{
-		echo $argx;
-	}
-}
-// you can see value
-// $app = new Main('slavik');
-
-
-//  linear search
-// полезно максимум для 100 элементов O(N) 
-/** 
-* @return elem | -1
-*/
-class LinkedSearch {
-
-    private $data = [];
-
-	public function __construct($data, $elem) 
-	{
-        for($i = 0; $i <= count($data); $i++) {
-            if ($data[$i] == $elem) {
-            	echo $data[$i];
-            	return true;
-            }
-        }
-        echo " искомый элемент не был найден";
-        return -1;
-	}
-
-}
-
-$data = [1, 'audi', 'bmw', 'mercedes', 'vw', 2, 10];
-// $linear = new LinkedSearch($data, 'vw');
-
-// (binarySearch) двоичный поиск - сложность O(log N)
- // массив из 100 000 потребуется всего 17 сравнений 
- // быстрее линейного
-
+// just simple code primitive and practic php code
 $left = 2;
 $right = 2;
 $mid = ($left + $right) / 2;
@@ -160,3 +112,114 @@ $y = 1;
 // $a = 'c';
 // $item = $$c=$$b;
 // echo $$b;
+
+
+// CONSTANTS php - before 5.3 use [define] | after 5.3 use [const]  .
+// constant use only scalar type variables int | float | string | boolean
+
+define('BIGDATA', 100.0000);
+define('BIG', 1000);
+define('SPITEM', 'superworkprinter');
+// define( 'FOO', array(1) );  php 5.6
+
+// const BASEVAR = 'my own app';
+// const MIXX = 1221122;
+// BEGIN PHP 5.6
+// you can use scalar
+// const FOO = 1 + 2;
+// const FOO = [1,2,3];
+// var_dump(FOO);
+// BEGIN PHP 7.0
+// define( 'FOO', [1, 2, 3] );
+
+
+// echo BASEVAR;
+// echo gettype(SPITEM); string
+// echo gettype(BIGDATA); double
+// echo gettype(BIG); int
+
+// $box = [];
+// $kik = is_scalar($box); false
+
+// разница const define
+
+// here will error
+// if (1) { 
+//     const NAME = 'VALUE';
+//     echo NAME;
+// }
+//  it working
+// if (1) {
+//     define('NAME', 'VALMAX');
+//     echo NAME;
+// }
+
+
+// register define Up != lover 
+// define( 'NAME', 'VALUE', true );
+// define('supra', 'yes');
+// define('SUPRA', 'no'); defferent values
+// const always 
+// const SUPRA = 'supercars';
+// const supra = 'you know you reset it variable';
+
+// const зависит от пространства имен 
+// define будет доступен за пределами namespace
+
+// константы класса php
+class Example
+{
+    const NAME = 'VAR';
+    //  begin php 5.6
+    const SEC_PER_DAY = 60 * 60 * 24;
+    public function print_name()
+    {
+        echo self::NAME;
+    }
+}
+// $app = new Example();
+// $app->print_name();
+// echo Example::NAME;
+
+// begin php 7.1.0
+class Foo
+{
+    public const BAR = 'public';
+    private const FIX = 'private';
+    static $mix_a_noice = 'nfs prostreet ';
+}
+// похоже со статическими переменными 
+// статическую переменную php компилятор не удаляет
+// echo Foo::$mix_a_noice; static variables
+function funcExtreame()
+{
+    // $int 1111111111
+    static $int = 0;
+    $int++;
+    echo $int;
+}
+// for($i = 0; $i++<10;) funcExtreame();
+// простая переменная будет обнулятся статичная будет сохранять значение              
+
+// MAGIC CONST 
+// echo __LINE__; current lines
+// echo __FILE__; current file
+// echo __DIR__; current dir and file
+// function xxx()
+// {
+//     echo __FUNCTION__; current name function
+// }
+// xxx();
+// class Boxwill
+// {
+//     public function __construct()
+//     {
+//         echo __CLASS__; current name class
+//     }
+// }
+// $bpx = new Boxwill();
+
+// __TRAIT__
+// __METHOD__ name method of class
+// __NAMESPACE__ namespace
+// ClassName::Class full name class  ::class

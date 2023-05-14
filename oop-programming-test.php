@@ -289,3 +289,34 @@ class Base
 // $bs1->color = '<br>orange';
 // echo $bs1->color;
 // $bs->inferno();
+
+
+// ура пример композиции 
+// создать обьект и использовать его метод внутри другого класса без наследрвания 
+// минус - связывание, плюс управление временем обьекта 
+class BassCloud
+{
+	public function soundCloud()
+	{
+		return 'Deaf-Bounce';	
+	}
+}
+
+class Car
+{
+	protected $cloudSound;
+	
+	public function __construct()
+	{
+		$this->cloudSound = new BassCloud;
+	}
+
+	public function currentAuto($mark)
+	{
+		echo 'в машине марки: ' . $mark . ', установлена фирма: ' . 
+		$this->cloudSound->soundCloud();
+	}
+}
+
+// $audi = new Car();
+// $audi->currentAuto('audi');
