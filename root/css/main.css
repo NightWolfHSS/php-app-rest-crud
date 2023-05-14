@@ -103,7 +103,7 @@ i { font-size: 12px; }
 .linespace {padding: 30px 0;}
 .contain-header {
     width: 100%;
-	background: rgba(0, 0, 0, 0.6);
+	background: #41439ff0;
 	text-align: center;
 }
 .contain-header-x {
@@ -159,8 +159,11 @@ i { font-size: 12px; }
 .box_post_two_1 { background: white; color: black;}
 .box_post_two_1 p { color: black!important; }
 .box_post_two_1 h3 { color: black!important; }
-.wrapper-form-exm1 { background: orange; border-radius: 21px;
-	background-image: url('../images/imagecompressor/dor.jpg'); position: relative; z-index: 8; }
+/*default css*/
+.wrapper-form-exm1, .wrapper-form-exm2 { border-radius: 21px; position: relative; z-index: 2;}
+.wrapper-form-exm1 {  background-image: url('../images/imagecompressor/dor.jpg'); }
+.wrapper-form-exm2 {  background-image: url('../images/imagecompressor/f10.jpg'); background-size: cover; }
+
 .chain_form {
 	background: #F2994A;
     background: -webkit-linear-gradient(to bottom, #F2C94C, #F2994A);
@@ -183,6 +186,9 @@ i { font-size: 12px; }
 .chain_form form input { display: block; padding: 5px; outline: none; border: 1px solid #4C3D3D; background: white; color: #4C3D3D; margin: 10px 0; font-weight: bold; border-radius: 10px; }
 .chain_form form button { background: black; color: white; border-radius: 10px; padding: 10px; border: none; margin-top: 10px; cursor: pointer; }
 .chain_form form button:hover { background: orangered; }
+.space_bar { background: #42275a;
+    background: -webkit-linear-gradient(to right, #734b6d, #42275a);
+    background: linear-gradient(to right, #734b6dfa, #42275a); }
 
 .space-loader {
 	padding-left: 5px; font-size: 10px;}
@@ -204,18 +210,90 @@ i { font-size: 12px; }
 	background: #42275a;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 }
-/*.box_post_one {
-	background: #E76161;
-}default*/
+
 .box_post_two {
 	background: #B04759;
 }
 
+
+
+.sql-desk {
+	z-index: 100;
+	position: relative!important;
+	margin: 70px auto;
+	max-width: 400px;
+	padding: 20px;
+	background: #212A3E;
+	border-radius: 15px;
+	transition: 1s ease all;
+	animation-name: kikdown;
+	animation-iteration-count: ease;	
+}
+
+.sql-desk  span  p { 
+	color: #F9D949;
+	font-size: 12px;
+}
+
+
+.sql-desk:before {
+
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(42deg, #f89b29 0%, #ff0f7b 72% );
+    transform: translate3d(-10px, 24px, 0) scale(0.95);
+    filter: blur(30px);
+    opacity: var(0.71);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+    animation: chshadow 5s linear infinite alternate;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.sql-desk::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+        
+        
+   @keyframes chshadow {
+	from {
+		background: linear-gradient(42deg, #f89b29 0%, #ff0f7b 72% );
+    transform: translate3d(-10px, 10px, 0) scale(0.95);
+	}
+	50% {
+		background: linear-gradient(42deg, #f89b29 0%, #ff0f7b 72% );
+    transform: translate3d(10px, 15px, 0) scale(0.95);
+	}
+	to {
+		background: linear-gradient(42deg, #f89b29 0%, #ff0f7b 72% );
+    transform: translate3d(-10px, 10px, 0) scale(0.95);
+	}
+}     
+
+
+
+
 /*footer*/
 footer {
+	border-top: 1px solid orange;
 	margin-top: 50px;
 	padding: 50px;
 	background: #E76161;
@@ -228,7 +306,6 @@ footer {
 .foo-wrapper {
 	text-align: left;
 	margin: 0 auto;
-
 	width: 80%;
 	display: grid;	
 	grid-template-columns: 30% 30% 30%;
@@ -244,7 +321,9 @@ footer {
 .tags-skils h3 { text-align: center; font-family: Calibri; font-weight: 100; margin: 40px 0;}
 .teck { width: 20px; margin: 0 auto;}
 .teck p {padding: 10px; margin: 0 auto;}
-
+.line-and { padding: 20px; background: #3C486B; border-top: 3px solid #F0A04B;}
+.line-and h5 { color: #B9EDDD; font-family: calibri; font-weight: bold; }
+.line-and span { color: #F0A04B; }
 
 @media (max-width: 1920px) {
 	header {

@@ -160,16 +160,23 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			</section>
 
 			<div class="crud examp2">
-				<div class="box_post_one">
-					тут какое то пояснение и картитнка 
+
+				<div class="wrapper-form-exm2">
+					<div class="box_post_one space_bar">
+						получить данные
+					</div>
 				</div>
+
 				<div class="line-decore"></div>
 				<div class="box_post_two">второй блок</div>
 			</div>
 
+
+
+
 			<section class="h-text">
-				<h3>Отправить что то по методу post</h3>
-				<p>Для этого нам понадобится форма</p>
+				<h3>Изменить данные методом PUT</h3>
+				<i>Также исползуется patch но для того что бы изменить только одно какое то поле</i>
 			</section>
 
 			<div class="crud examp1">
@@ -181,8 +188,8 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			</div>
 
 			<section class="h-text">
-				<h3>Отправить что то по методу post</h3>
-				<p>Для этого нам понадобится форма</p>
+				<h3>Удалим данные методом DELETE</h3>
+				<p>текущие данные будут удалены</p>
 			</section>
 
 			<div class="crud examp1">
@@ -192,16 +199,18 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 				<div class="line-decore"></div>
 				<div class="box_post_two">второй блок</div>
 			</div>
-
+			<br><br><br><br><br>
+			<section class="sql-desk">
+				<h3>Почему мы эти команды пишем в "высоком регистре"</h3><br><hr><br>
+				<p>Все команды и операции sql пишутся в верхнем регистре потому что хороший тон программирования на SQL</p><br>
+				<p>Рассмотрим пример простого запроса, это выборка чая по цене - выберим чай дороже 2000 </p><br>
+				<span><p>SELECT * FROM `tea` </p>
+				<p>WHERE price >= 2000;</p></span>
+			</section>
 		</div>
-
 	</div>
 
 	<footer>
-		<!-- company oo too mail telegramm LOGO -->
-		<!-- <h4 class="h-text">Мы используем грид (хотя можем и флексы и BOOTSTRAP 3, 4)</h4> -->
-		<!-- инструменты https://grid.malven.co/ -->
-		<!-- opensource github -->
 	    <div class="logo logo-center">
 			<img src="/root/images/logo/logo3.png" alt="logo">
 		</div><br>
@@ -273,9 +282,17 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			    <li><p>DRY</p></li>
 			</section>
 		</div><br>
-		<h5><span>theme: </span>Творический лес</h5>
-		line fone images 
+		<!-- <div class="foo-wrapper">
+			<section class="sil">
+				<li><a href="">gitHub</a></li>
+			</section>
+		</div><br> -->
 	</footer>
+	<div class="line-and">
+		<h5><span>Тема: </span>Творический лес</h5>
+	</div>
+	<!-- прокрутка процент с верху с лева -->
+	<!-- код между пустого пространства плавающие анимированые буквы например php - sql - скрыть или уменьшить при маленьком дисплеи -->
 	<!-- вы согласны на использование печенек в противном случае покинте этот сайт ! -->
 	<!-- создать летающий появляющийся при наведении смайлик доброты или ярости -->
 	<!-- создать меню с боку это может быть выбор тем  -->

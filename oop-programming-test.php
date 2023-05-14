@@ -350,4 +350,4 @@ class Person
 $music = new TrapNation;
 
 $person = new Person($music);
-// $person->playSound(); wokr it
+// $person->playSound(); work it
