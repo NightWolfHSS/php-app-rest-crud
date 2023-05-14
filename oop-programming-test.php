@@ -320,3 +320,34 @@ class Car
 
 // $audi = new Car();
 // $audi->currentAuto('audi');
+
+// агрегация 
+// плюсы - легко создать новый обьект - минусы много переменных 
+
+class TrapNation
+{
+	public function trapMusic()
+	{
+		return 'good music is playing on your phone';
+	}
+}
+
+class Person
+{
+	protected $music;
+
+	public function __construct($music)
+	{
+		$this->music = new TrapNation;
+	}
+
+	public function playSound()
+	{
+		echo $this->music->trapMusic();
+	} 
+}
+
+$music = new TrapNation;
+
+$person = new Person($music);
+// $person->playSound(); wokr it
