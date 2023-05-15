@@ -200,13 +200,31 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 				<div class="box_post_two">второй блок</div>
 			</div>
 			<br><br><br><br><br>
-			<section class="sql-desk">
-				<h3>Почему мы эти команды пишем в "высоком регистре"</h3><br><hr><br>
-				<p>Все команды и операции sql пишутся в верхнем регистре потому что хороший тон программирования на SQL</p><br>
-				<p>Рассмотрим пример простого запроса, это выборка чая по цене - выберим чай дороже 2000 </p><br>
-				<span><p>SELECT * FROM `tea` </p>
-				<p>WHERE price >= 2000;</p></span>
-			</section>
+
+			<div class="box-attention">
+
+				<div class="php-party">
+					<div class="party-p"><span style="color: #BAD7E9">P</span></div>
+					<div class="party-h"><span class="blue">H</span></div>
+					<div class="party-p2">P</div>
+				</div>
+
+				<section class="sql-desk">
+					<h3>Почему мы эти команды пишем в "высоком регистре"</h3><br><hr><br>
+					<p>Все команды и операции sql пишутся в верхнем регистре потому что хороший тон программирования на SQL</p><br>
+					<p>Рассмотрим пример простого запроса, это выборка чая по цене - выберим чай дороже 2000 </p><br>
+					<span><p>SELECT * FROM `tea` </p>
+					<p>WHERE price >= 2000;</p></span>
+				</section>
+
+				<div class="sql-party">
+					<span class="party-s">S</span>
+					<span class="party-q">Q</span>
+					<span class="party-l">L</span>
+				</div>
+
+			</div>
+			
 		</div>
 	</div>
 
