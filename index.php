@@ -201,29 +201,30 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			</div>
 			<br><br><br><br><br>
 
-			<div class="box-attention">
-
-				<div class="php-party">
-					<div class="party-p"><span style="color: #BAD7E9">P</span></div>
-					<div class="party-h"><span class="blue">H</span></div>
-					<div class="party-p2">P</div>
+			<div class="wp-box-attention">
+				<div class="mini-attention">
+					<h3>CodeSpace-PHP + SQL</h3>
 				</div>
-
-				<section class="sql-desk">
-					<h3>Почему мы эти команды пишем в "высоком регистре"</h3><br><hr><br>
-					<p>Все команды и операции sql пишутся в верхнем регистре потому что хороший тон программирования на SQL</p><br>
-					<p>Рассмотрим пример простого запроса, это выборка чая по цене - выберим чай дороже 2000 </p><br>
-					<span><p>SELECT * FROM `tea` </p>
-					<p>WHERE price >= 2000;</p></span>
-				</section>
-
-				<div class="sql-party">
-					<span class="party-s">S</span>
-					<span class="party-q">Q</span>
-					<span class="party-l">L</span>
-				</div>
-
-			</div>
+				<div class="box-attention">
+					<div class="php-party">
+						<div class="party-p"><span style="color: #BAD7E9">P</span></div>
+						<div class="party-h"><span class="blue">H</span></div>
+						<div class="party-p2">P</div>
+					</div>
+					<section class="sql-desk">
+						<h3>Почему мы эти команды пишем в "высоком регистре"</h3><br><hr><br>
+						<p>Все команды и операции sql пишутся в верхнем регистре потому что хороший тон программирования на SQL</p><br>
+						<p>Рассмотрим пример простого запроса, это выборка чая по цене - выберим чай дороже 2000 </p><br>
+						<span><p>SELECT * FROM `tea` </p>
+						<p>WHERE price >= 2000;</p></span>
+					</section>
+					<div class="sql-party">
+						<div class="party-s"><span>S</span></div>
+						<div class="party-q"><span style="color: #F7DB6A;">Q</span></div>
+						<div class="party-l"><span>L</span></div>
+					</div>
+				</div> <!-- end box-attention -->
+			</div> <!-- end wp-box-attention -->
 			
 		</div>
 	</div>
@@ -309,9 +310,24 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 	<div class="line-and">
 		<h5><span>Тема: </span>Творический лес</h5>
 	</div>
+
+	<!-- ролик на заднем фоне кода можно написать так -
+
+        поле текст ареа в центре полупрозрачный  кнопка отправки там проверка
+		вы можете почуствовать себя кодером прямо сейчас - напишите запрос 
+		SELECT * FROM users
+		where id = 1;
+
+		сделать проверку на этот текст и сказать ура вы выполнили запрос 
+		что касается другого сказать в данных запрос не был найден ) смайлик 
+	 -->
+
 	<!-- прокрутка процент с верху с лева -->
 	<!-- код между пустого пространства плавающие анимированые буквы например php - sql - скрыть или уменьшить при маленьком дисплеи -->
-	<!-- вы согласны на использование печенек в противном случае покинте этот сайт ! -->
+	<!-- вы согласны на использование печенек в противном случае покинте этот сайт ! 
+
+	кружочег крестик анимированый по кругу радиус бордер
+	-->
 	<!-- создать летающий появляющийся при наведении смайлик доброты или ярости -->
 	<!-- создать меню с боку это может быть выбор тем  -->
 </body>
