@@ -259,7 +259,7 @@ class Pi extends Test
 
 class Base 
 {
-	//  доступен для всех
+	//  недоступен для всех
 	private $color = 'null';
 	// метод обьектов 
 	public function inferno(int $fix)
@@ -348,6 +348,60 @@ class Person
 }
 
 $music = new TrapNation;
-
 $person = new Person($music);
 // $person->playSound(); work it
+
+// get Data static method
+
+
+// class Mag
+// {
+// 	public static function frutz(int $name)
+// 	{
+// 		if (!is_int($name)) {
+// 			throw new Exception("это не число - вы не можете учавствовать");
+// 		} 
+
+// 		try {
+// 			echo $name;
+// 		} catch (Exception $e) {
+// 			echo 'Error => ', $e->getMessage() . "<br>";
+// 		}
+// 		return $name;
+// 	}
+// }
+
+
+
+
+
+// $mag = new Mag;
+// var_dump($mag::frutz('123')); 
+
+
+// TypeHint
+class Pub
+{
+	public static function frutz(string $name, int $age)
+	{
+
+		return $elems = [$name, $age];
+	}
+
+	// 
+	public function getName($name): void
+	{
+		echo $name;
+	}
+	
+}
+
+
+$pub = new Pub;
+echo "<pre>";
+var_dump($pub::frutz('123', '123'));
+echo "<pre>";
+
+$pub->getName('Alex');
+
+
