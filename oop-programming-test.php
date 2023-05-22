@@ -353,7 +353,7 @@ $person = new Person($music);
 
 // get Data static method
 
-
+// use Error, it a nice tools
 // class Mag
 // {
 // 	public static function frutz(int $name)
@@ -384,24 +384,30 @@ class Pub
 {
 	public static function frutz(string $name, int $age)
 	{
-
 		return $elems = [$name, $age];
 	}
 
-	// 
+	// only show  | cannot be returned | void
 	public function getName($name): void
 	{
 		echo $name;
 	}
-	
+  
+    // может быть и не строкой | рекомендация строка | не может быть пустой
+	public function noice(?string $noice): bool
+	{
+		return $noice;
+	}
+
+    /**
+     * getting string | object
+     * @return array;  
+     */
+	public static function getAway($name, $func)
+	{
+		return $box = $name." ". $func($name);  
+	}
+
 }
-
-
-$pub = new Pub;
-echo "<pre>";
-var_dump($pub::frutz('123', '123'));
-echo "<pre>";
-
-$pub->getName('Alex');
-
+// ////////////
 

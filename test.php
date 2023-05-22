@@ -223,3 +223,8 @@ function funcExtreame()
 // __METHOD__ name method of class
 // __NAMESPACE__ namespace
 // ClassName::Class full name class  ::class
+
+
+// callable function callback 
+
+echo "you can see test.php file";

@@ -1,0 +1,16 @@
+{
+    "name": "xhhs/php-app-rest-crud",
+    "description": "just test autoloader compose",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "Practic\\Library": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Slavik"
+        }
+    ],
+    "require": {}
+}
