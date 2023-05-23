@@ -23,9 +23,9 @@
 // use composer autoloader 
 require 'vendor/autoload.php';
 
-// $app = new Animal(); загрузил просто как файл 
+// можно использовать функционал из файлов которые автоматически подключаются
 // настройка комозера  - files:["php_classes/file_name.php"]
-// psr-0
+
 //  use psr 0 class autoloader - настройка в композере
 // "psr-0": {
 //     "xhhs\\php-app-rest-crud": "php_classes"

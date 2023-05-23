@@ -1,4 +1,6 @@
 <?php 
+echo "<h2>TEST.PAGE.PHP</h2>";
+echo "<p>страница тестов php кода</p>";
 // just simple code primitive and practic php code
 $left = 2;
 $right = 2;
@@ -224,7 +226,28 @@ function funcExtreame()
 // __NAMESPACE__ namespace
 // ClassName::Class full name class  ::class
 
+// closures or  Anonymous functions 
+$timebox = preg_replace_callback('~([a-z])~', function($match) {
+    return strtoupper($match[1]);
+}, 'string-base-move');
+
+// 2 анонимная функция - функция без имени
+$street = function($base)
+{
+    var_dump($base);
+};
+// $street('base');
+// $street('mark');
+
+// 3 анонимная функция и наследование переменной 
+$two_time_box = 'just time box for test';
+// значение выше проигнорировать так как передача по ссылки &
+$exp = function($own) use (&$two_time_box)
+{
+    var_dump($two_time_box . " " .  $own);
+};
+$two_time_box = "work is a new energy";
+// $exp('смотри обновленное значение');
+
 
 // callable function callback 
-
-echo "you can see test.php file";

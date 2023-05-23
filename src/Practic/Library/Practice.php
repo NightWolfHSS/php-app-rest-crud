@@ -5,6 +5,6 @@ class Practice
 {
 	public function __construct()
 	{
-		echo "рад тебя видеть";
+		echo "you can see that class";
 	}
 }
