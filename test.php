@@ -246,8 +246,48 @@ $exp = function($own) use (&$two_time_box)
 {
     var_dump($two_time_box . " " .  $own);
 };
+function superTime()
+{
+    return "PHPGOODLANGUAGE";
+}
 $two_time_box = "work is a new energy";
 // $exp('смотри обновленное значение');
-
+$no_time = function($ix)
+{
+    echo superTime();
+    echo "<br>";
+    echo $ix."<br>";
+};
+$no_time('id:user-noJSON');
 
 // callable function callback 
+
+function my_test_callback_func()
+{
+    echo "это пример функции обратного вызова";
+}
+
+function the_history($boss, $callback)
+{
+    $adventure = 'the `Adventure Time`';
+    echo "film: ".$adventure. "<br>".$boss;
+    call_user_func($callback);
+}
+the_history('Slavik ', 'my_test_callback_func');
+
+echo "<br><hr>";
+echo "вызов статичного класса в аргументе вызов callback функции: <br>";
+class Tmm
+{
+    public static function generate($box, $callback)
+    {   
+        echo "пользователь: ".$box;
+        echo "<br>";
+        call_user_func($callback);
+    }
+}
+
+$tmm = new Tmm;
+$tmm::generate('id: 21', function(){
+    echo "вызов анонимной функции";
+});
