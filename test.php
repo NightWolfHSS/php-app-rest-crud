@@ -291,3 +291,60 @@ $tmm = new Tmm;
 $tmm::generate('id: 21', function(){
     echo "вызов анонимной функции";
 });
+echo "<hr>";
+// _______________________________________________________
+// циклы 
+$x = 1;
+while ($x <= 100) {
+    echo  'the number is: '.$x."<br>";
+    $x+=10;
+}
+echo "<br>";
+// выполнение пока true do while
+$x = 1;
+do {
+    echo $x." итерация - если ты видишь пока true <Br> " ;
+    $x++;
+} while ($x <= 5);
+
+//  check value
+$x = 6;
+do {
+  echo "The number is: $x <br>";
+  $x++;
+} while ($x <= 5);
+echo "<br>";
+// for перебор элементов или подсчет
+for ($x = 0; $x <= 10; $x++)
+{
+    echo "numb:" . $x . "<br>";
+}
+echo "<br>";
+// foreach
+$boxs = array('mad', 'six', 'event', 'nissan', 'xxxx');
+foreach($boxs as $val)
+{
+    echo "$val: - элемент массива <br>";
+}
+echo "<br>";
+// foreach advanced
+
+$box_2 = [
+    'ключ '  => 'от машины', 
+    'дом' => 'от друга',
+    'квартира' => 'для кота'
+]; 
+
+foreach ($box_2 as $key => $val) {
+    echo "$key = $val <br>";
+}
+//  break
+echo "<br>";
+for($x = 0; $x < 10; $x++)
+{
+    if ($x == 4)
+    {
+        break;
+    }
+    echo "числo ". $x. "<br>";
+}
