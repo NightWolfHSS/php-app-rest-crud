@@ -32,4 +32,6 @@ require 'vendor/autoload.php';
 // }
 
 // теперь мы можем подключать любой класс в стандарте psr-0 composer
-// $testLoader = new Practic\Library\Practice(); работает
+use Practic\Library\Ease;
+
+$testLoader = new Ease(); 

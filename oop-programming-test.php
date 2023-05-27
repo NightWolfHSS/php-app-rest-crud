@@ -411,3 +411,26 @@ class Pub
 }
 // ////////////
 
+
+class UserRep
+{
+	public function __construct()
+	{
+		// echo "this is DI";
+	}
+
+	public function start()
+	{
+		echo "GG";
+	}
+}
+
+class UserRegistrationService 
+{
+	public function __construct(UserRep $usr)
+	{
+		$usr()->start;
+	}
+}
+$rep = new UserRep;
+$service = new UserRegistrationService($rep);
