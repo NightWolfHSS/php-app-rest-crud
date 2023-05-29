@@ -1,6 +1,7 @@
 <?php 
 // Just code and oop testing
 
+include 'Services/Service.php';
 
 /**
 * abstruct | polymorphism
@@ -412,25 +413,71 @@ class Pub
 // ////////////
 
 
-class UserRep
+// IoC - Inversion of Control;
+
+class FrontController
 {
-	public function __construct()
+	private $service;
+
+	public function __construct(Service $service)
 	{
-		// echo "this is DI";
+		$this->service = $service;
 	}
 
-	public function start()
+	public function index()
 	{
-		echo "GG";
+		// return json_encode($this->service->getData()); string
+		return $this->service->getData(); // data
+	}
+
+}
+// IoC
+//  но таких классов может быть много
+$frontC = new FrontController(new Service(new MsqRepository()));
+// echo "<pre>";
+// var_dump($frontC->index());
+// echo "</pre>";
+
+// Dependency injection
+// внедрение зависимости DI
+// constructor injection 
+class Programmer
+{
+	private $skills;
+
+	public function __construct($skills)
+	{
+		$this->skills = $skills;
+	}
+
+	public function totalSkills()
+	{
+		return count($this->skills);
 	}
 }
 
-class UserRegistrationService 
+$createSkills = array('PHP', 'JAVASCRIPT', 'SQL', 'AJAX', 'OOP', 'MVC', 'SOLID', "API");
+// $person = new Programmer($createSkills);
+// echo $person->totalSkills();
+
+// Setten injection 
+
+class Machine 
 {
-	public function __construct(UserRep $usr)
+	private $engine;
+
+	public function setEngine($engine)
 	{
-		$usr()->start;
+		$this->engine = $engine;
+	}
+
+	public function getEngine()
+	{
+		return json_encode($this->engine);
 	}
 }
-$rep = new UserRep;
-$service = new UserRegistrationService($rep);
+
+// $kikdown = new Machine;
+// $sortEngine = ['Russ', 'Eugene', 'Eji20', 'Rb26', 'jz???'];
+// $kikdown->setEngine($sortEngine);
+// echo $kikdown->getEngine();

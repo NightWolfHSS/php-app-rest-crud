@@ -348,3 +348,19 @@ for($x = 0; $x < 10; $x++)
     }
     echo "числo ". $x. "<br>";
 }
+
+// JSON
+$boxbon = array('name1' => 'Slavik', 'name2' => 'Maxim', 'name3' => 'Fixerd' );
+$nextAt = [$boxbon];
+echo "<pre>";
+var_dump($nextAt);
+echo "</pre>";
+
+// string boxbon and nextAt
+$boxStr = json_encode($nextAt);
+echo "<br>";
+var_dump($boxStr);
+echo "<br>";
+// object => boxbon
+$returnJson = json_decode($boxStr);
+var_dump($nextAt);

@@ -1,5 +1,7 @@
 <?php 
+
 /**
+ * for testing composer
  * Animal
  */
 class Animal 
