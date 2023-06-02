@@ -481,3 +481,42 @@ class Machine
 // $sortEngine = ['Russ', 'Eugene', 'Eji20', 'Rb26', 'jz???'];
 // $kikdown->setEngine($sortEngine);
 // echo $kikdown->getEngine();
+
+// just test a typehint
+class ExtreameTest
+{
+
+
+	// надо доделать
+	private $items = [];
+
+    /**
+     * typehint: 
+     * string|int|bool|float|object|unset|array|
+     * void: nothing is returned| you can't return anything
+     * and Object class (B $b)
+     */
+    public static testType(array $items)
+    {
+    	return $items;
+    }
+
+    public static function getItems()
+    {
+    	var_dump($)
+    } 
+
+
+}
+
+
+
+
+
+
+
+
+
+// null is object
+// $app = new Extreame;
+// var_dump($app->pixel()) ;
