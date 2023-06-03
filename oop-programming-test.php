@@ -556,3 +556,49 @@ $boxTimes = ['cool', 'time', 'elem', '123', 123];
 // echo "<pre>";
 // var_dump($fox);
 // echo "<pre>";
+
+class Dinamix
+{
+	private static  $xp;
+
+	// статика Uncaught Error: Using $this when not in object context 
+	// динамически ты не получиш статичным методом данные 
+	public static function xp($xp)
+	{
+		self::$xp = $xp;
+	}
+
+	// динамика
+	public function secondXp($xp)
+	{
+		$this->xp = $xp;
+	}
+
+	// получение данных динамика
+	public function getXp()
+	{
+		$xp_box = $this->xp;
+		return $xp_box;
+	}
+
+	// получение данных статически - failed
+	public static function getSXp()
+	{
+		$xp_box = self::$xp;
+		return $xp_box;
+	}
+}
+
+
+// ИСПОЛЬЗУЕТСЯ СТАТИКА КОГДА НАМ НЕ НУЖЕН ОБЬЕКТ А ДАННЫЕ ПО УМОЛЧАНИЮ
+// array
+// $xp = ['ходить ', 'бродить', 'бежать', 'идти'];
+// $app = new Dinamix;
+// $box = Dinamix::xp($xp); 
+// $app->secondXp($xp); //set data
+// // $box = $app->getXp(); // Успех - данные получены 
+// $box = Dinamix::getSXp();
+// var_dump($box); 
+// var_dump($box); посмотреть набор - массив
+
+
