@@ -483,40 +483,76 @@ class Machine
 // echo $kikdown->getEngine();
 
 // just test a typehint
+
+// Следовательно, из статического метода невозможно получить доступ к объекту
+// Внутри него $this просто не существует
 class ExtreameTest
 {
+	private $items;
 
-
-	// надо доделать
-	private $items = [];
+	/**
+	 * контрокор принимает определенный класс в
+	 * данном случае Memory имя соответствующего класса
+	 * TypeHint Class Memory - и никакой другой класс | 
+	 */ 
+	public function __construct(Memory $memory)
+	{
+		$this->memory = $memory;
+	}
 
     /**
      * typehint: 
      * string|int|bool|float|object|unset|array|
      * void: nothing is returned| you can't return anything
      * and Object class (B $b)
+     * current we use Array
      */
-    public static testType(array $items)
-    {
-    	return $items;
+    public function testType(array $items)
+    {	
+    	$this->items = $items;
     }
-
-    public static function getItems()
+    /**
+     * @return items
+     */
+    public function getItems()
     {
-    	var_dump($)
+    	return $this->items;
     } 
 
+    /**
+     * @return value 
+     * Class Memory
+     */
+    public static function getXp($xp)
+    {
+		return Memory::xp($xp);
+    }
 
 }
 
 
+class Memory
+{
+	public function __construct()
+	{
+		echo "ты создал класс memory";
+	}
 
+	public static function xp($xp)
+	{
+		return "вы получили: ".$xp. " опыта";
+	}
+}
 
-
-
-
-
-
-// null is object
-// $app = new Extreame;
-// var_dump($app->pixel()) ;
+$boxTimes = ['cool', 'time', 'elem', '123', 123];
+// new elem
+// $exp = new ExtreameTest(new Memory);
+// echo "<br>";
+// echo ExtreameTest::getXp('12');
+// echo "<br>"; 
+// // set array elems 
+// $exp->testType($boxTimes);
+// $fox = $exp->getItems();
+// echo "<pre>";
+// var_dump($fox);
+// echo "<pre>";
