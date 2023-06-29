@@ -1,5 +1,5 @@
 <?php 
-require 'php_classes/MsqRepository.php';
+require '../php_classes/MsqRepository.php';
 
 class Service {
 

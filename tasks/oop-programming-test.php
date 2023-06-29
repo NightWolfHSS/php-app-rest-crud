@@ -1,9 +1,10 @@
 <?php 
 // Just code and oop testing
 
-include 'Services/Service.php';
+include '../Services/Service.php';
 
 /**
+* справочник - пиши ctrl + f и ищи 
 * abstruct | polymorphism
 * oop 
 * get and set name for Admin | user | pets
@@ -16,7 +17,6 @@ abstract class AbstrPerson
 	{
 		print $this->setName($name);
 	}
-
 }
 
 /**
@@ -24,23 +24,19 @@ abstract class AbstrPerson
  */
 class People extends AbstrPerson
 {
-
     // person
-
 	protected function setName($name)
 	{
 		return $name;
 	}
 
 	// superuser
-
 	public function superPersonAdmi($name)
 	{
 		return $this->setName($name);
 	}
 
 	// name pets
-
 	public function petsOfPerson($name)
 	{
        return $this->setName($name);
@@ -601,4 +597,154 @@ class Dinamix
 // var_dump($box); 
 // var_dump($box); посмотреть набор - массив
 
+/*Полиморфизм*/
+/*реализация задач одним методом*/
 
+/* слишком сырой пример*/
+// class Shape
+// {
+// 	public function getArea()
+// 	{
+// 		/*realize summ a figure*/
+// 	}
+// }
+
+// class Rectangle extends Shape
+// {
+// 	public function getArea()
+// 	{
+// 		/*realize */
+// 	}
+// }
+
+// class Circle extends  Shape
+// {
+// 	public function getArea()
+// 	{
+// 		/*realize*/
+// 	}
+// }
+
+
+abstract class Shape {
+	abstract public function getArea();
+}
+
+class Reactangle extends Shape
+{
+	private $width;
+	private $height;
+
+	public function __construct($width, $height)
+	{
+		$this->width = $width;
+		$this->height = $height;
+	}
+
+	public function getArea()
+	{
+		return $this->width * $this->height;
+	}
+
+}
+
+class Circle extends Shape
+{
+	private $radius;
+
+	public function __construct($radius)
+	{
+		$this->radius = $radius;
+	}
+
+	public function getArea()
+	{
+		return pi() * $this->radius * $this->radius;
+	}
+
+}
+
+$shapes = [
+	new Reactangle(5, 10),
+	new Circle(3)
+];
+
+foreach($shapes as $shape)
+{
+	echo "Площадь: " . $shape->getArea() . "<br>";
+}
+
+echo "<Br>";
+
+
+
+
+
+/*another test*/
+/*class Personn {
+    protected $name;
+    protected $age;
+
+    public function __construct($name, $age) {
+        $this->name = $name;
+        $this->age = $age;
+    }
+}
+
+$person = new Personn('John', 25);
+$persor = new Personn('sJohn', 25);*/
+/*echo $persor->name;
+echo $person->name; // Выведет 'John'
+echo $person->age; // Выведет 25*/
+
+/*наследование*/
+
+class Animal 
+{
+	protected $name;
+	protected $age;
+
+	public function __construct($name, $age)
+	{
+		$this->name = $name;
+		$this->age = $age;
+	}
+
+	public function eat()
+	{
+		echo "{$this->name} кушает <br>";
+	}
+
+	public function sleep()
+	{
+		echo "{$this->name} спит <br>";
+	}
+
+}
+
+/*child */
+class Cat extends Animal
+{
+	public function meow()
+	{
+		echo "{$this->name} says meow . <br>";
+	}
+
+	public function age()
+	{
+		echo "нашей зверюшке {$this->age} года <br>";
+	}
+
+}
+/*create obj ext animal*/
+$animal = new Animal('Лев', 6);
+$cat = new Cat('Barsic Mole', 2);
+
+/*run animal*/
+$animal->eat();
+$animal->sleep();
+/*run cat */
+$cat->eat();
+$cat->sleep();
+$cat->meow();
+$cat->age();
