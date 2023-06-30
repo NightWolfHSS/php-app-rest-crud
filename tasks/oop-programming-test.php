@@ -703,11 +703,13 @@ class Animal
 {
 	protected $name;
 	protected $age;
+	protected $test;
 
-	public function __construct($name, $age)
+	public function __construct($name, $age, $test)
 	{
 		$this->name = $name;
 		$this->age = $age;
+		$this->test = $test;
 	}
 
 	public function eat()
@@ -735,10 +737,16 @@ class Cat extends Animal
 		echo "нашей зверюшке {$this->age} года <br>";
 	}
 
+
+	public function unknownIsVar()
+	{
+		echo " эта переменная не заработала бы если бы не была обьявлена в родительском конструкторе {$this->test}";
+	}
+
 }
 /*create obj ext animal*/
-$animal = new Animal('Лев', 6);
-$cat = new Cat('Barsic Mole', 2);
+$animal = new Animal('Лев', 6, 'a');
+$cat = new Cat('Barsic Mole', 2, 'значение переменной');
 
 /*run animal*/
 $animal->eat();
@@ -748,3 +756,134 @@ $cat->eat();
 $cat->sleep();
 $cat->meow();
 $cat->age();
+
+/*вот еще пример пока не определим в конструкторе переменную test и не инициализируем ее она не будет не где показыватся и работать*/
+/*$cat->unknownIsVar();*/
+
+
+/*инкапсуляция - позволяет обьеденять свойства и методы в классе и скрывать их от внешнего доступа - также ограничения доступа к определенной информации public protected private
+для доступа к скрытым свойствам помогают такие методы как геттеры и сеттеры
+
+
+безопасность Инкапсуляция помогает скрыть внутренние детали реализации класса, предотвращая неправильное использование данных и методов.
+
+Модульность: Классы, использующие инкапсуляцию, могут быть разработаны независимо друг от друга, что облегчает сопровождение и расширение кода.
+
+Сокрытие сложности: Инкапсуляция позволяет предоставить простой интерфейс для работы с классом, скрывая сложность его внутренней реализации.
+*/
+
+class Concept
+{
+	private $model;
+	private $brand;
+
+	public function getModel()
+	{
+		return $this->model;
+	}
+
+	public function setModel($model)
+	{
+		$this->model = $model;
+	}
+
+	public function getBrand()
+	{
+		return $this->brand;
+	}
+
+	public function setBrand($brand)
+	{
+		$this->brand = $brand;
+	}
+
+}
+
+$concept = new Concept;
+$concept->setModel("power");
+$concept->setBrand("JInk");
+echo "<br>";
+echo $concept->getBrand() . "<br>";
+echo $concept->getModel() . "<br><br>";
+
+
+/* замыкания closure*/
+
+/*exm 1*/
+$fox = function($foxid)
+{
+	echo "привет : $foxid";
+};
+
+$fox("Лисичка из браузера");
+
+/*exm 2 перехват переменной*/
+$multimetr = 2;
+$calculate = function($num) use ($multimetr)
+{
+	return $num * $multimetr;
+};
+echo "<br>";
+echo $calculate(4);
+
+/*exm3 перехват переменной по ссылке*/
+$counter = 0;
+$incrementer = function() use (&$counter)
+{
+	$counter++;
+	echo "счетчик =  $counter <br>";
+};
+echo "<br>";
+$incrementer();
+$incrementer();
+$incrementer();
+echo "<br>";
+
+
+
+/*
+В PHP доступны следующие типы хинтинга:
+
+Примитивные типы данных:
+
+int: целое число
+float: число с плавающей запятой
+bool: булево значение (true или false)
+string: строка
+Классы и интерфейсы:
+
+Имя класса или интерфейса, указывающее ожидаемый тип объекта.
+Массивы:
+
+array: обычный индексированный массив
+тип[]: массив с элементами определенного типа (например, int[] для массива целых чисел)
+Скалярные типы:
+
+callable: функция обратного вызова (callback)
+iterable: итерируемый объект (массив или объект, реализующий интерфейс Traversable)*/
+
+
+function num(int $a, int $b): int
+{
+	return $a + $b;
+}
+echo num(2, 3);
+echo "<br>";
+/* part2 */
+function divide(float $a, float $b): float
+{
+	return $a / $b;
+}
+echo divide(10.2, 2.1);
+echo "<br>";
+/*part3 arr*/
+function proccessArray(array $arr): void
+{
+	foreach ($arr as $item) {
+		echo $item . "<br>";
+	}
+}
+echo "<br>";
+$array = [1,2,3,4,5];
+proccessArray($array);
+echo "<br>";
