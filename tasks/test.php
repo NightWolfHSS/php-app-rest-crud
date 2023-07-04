@@ -364,4 +364,8 @@ echo "<br>";
 // object => boxbon
 $returnJson = json_decode($boxStr);
 var_dump($nextAt);
+// 01010100101010010101010010010010010100101010111011010010101010011001010
+// callback  - функция обратного вызова
+echo "<br>";
+
 
