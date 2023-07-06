@@ -6,6 +6,7 @@
 	<title>php-template </title>
 	<link rel="stylesheet" href="/root/css/main.css">
 	<script defer src="/root/js/main.js"></script>
+	<script defer src="/root/js/xhr.js"></script>
 </head>
 <body>
 
@@ -133,12 +134,12 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 			<div class="crud examp1">
 				<div class="wrapper-form-exm1">
 					<div class="box_post_one chain_form">
-						<form action="#" method="post">
-							<input required type="text" name="work" placeholder="work - работа">
-							<input required type="text" name="name" placeholder="name - имя">
-							<input required type="text" name="cat" placeholder="есть кот ?">
-							<input required type="text" name="dog" placeholder="есть собака ?">
-							<button type="submit">Отправить</button>
+						<form>
+							<input required type="text" id="work" placeholder="work - работа">
+							<input required type="text" id="name" placeholder="name - имя">
+							<input required type="text" id="cat" placeholder="есть кот ?">
+							<input required type="text" id="dog" placeholder="есть собака ?">
+							<button class="space-send" type="button">Отправить</button>
 							<div class="space-loader">
 								<div class="dot r-dot"><li><i></i></li></div>
 								<div class="dot b-dot"><li><i></i></li></div>
@@ -151,6 +152,14 @@ echo &quot;Ваш возраст: &quot; <span style="color: orangered;"> $_GET[
 				<div class="box_post_two_1">
 					<h3>отправка</h3>
 					<p>отправка данных и получение ответа:</p>
+					<div class="resp">
+						<div class="responce_off">
+							<img src="/root/svg/preloader.svg" alt="svg">
+						</div>
+						<div class="tx text_off">
+							<p>...</p>
+						</div>
+					</div>
 				</div>
 			</div>
 

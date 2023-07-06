@@ -867,6 +867,7 @@ function num(int $a, int $b): int
 {
 	return $a + $b;
 }
+
 echo num(2, 3);
 echo "<br>";
 /* part2 */
