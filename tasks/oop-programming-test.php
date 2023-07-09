@@ -888,3 +888,32 @@ echo "<br>";
 $array = [1,2,3,4,5];
 proccessArray($array);
 echo "<br>";
+
+// private test
+class PrivateTest
+{
+	private $test;
+
+	private function setTime($test)
+	{
+		$this->test = $test;
+	}
+
+	private function getTime()
+	{
+		return $this->test;
+	}
+
+	public function showTime($time)
+	{
+		// setTime
+		$this->setTime($time);
+		//  getTime
+		$tmres = $this->getTime();
+		return $tmres;
+	}
+
+}
+
+$tt = new PrivateTest;
+// echo $tt->showTime('19-20');
