@@ -915,5 +915,62 @@ class PrivateTest
 
 }
 
-$tt = new PrivateTest;
+/*$tt = new PrivateTest;*/
 // echo $tt->showTime('19-20');
+
+interface BoostLoaderInterface
+{
+	public function  bootloader($param_start);
+}
+
+class BoostManager implements BoostLoaderInterface
+{
+	private $boot;
+
+	public function testCreateBootLoader($param)
+	{
+		return $param;
+	}
+
+
+	public function bootloader($param_start)
+	{
+		return $this->boot = $param_start;
+	}
+
+
+
+}
+
+/*$btld = new BoostManager;
+echo $btld->bootloader('engine on');*/
+interface DatabaseInterface {
+    public function insert($table, $data);
+}
+
+class Order {
+    private $database;
+    
+    public function __construct(DatabaseInterface $database) {
+        $this->database = $database;
+    }
+    
+    public function save() {
+        // Сохранение заказа
+        $this->database->insert('orders', $data);
+    }
+}
+
+class MySQLDatabase implements DatabaseInterface {
+    public function insert($table, $data) {
+        // Логика вставки данных в таблицу базы данных MySQL
+    }
+}
+
+class MongoDBDatabase implements DatabaseInterface {
+    public function insert($table, $data) {
+        // Логика вставки данных в коллекцию базы данных MongoDB
+    }
+}
+/*-100-0921-39-01293-129-391-293-1923912-39*/
+
