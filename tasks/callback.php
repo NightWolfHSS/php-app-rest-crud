@@ -1,4 +1,6 @@
 <?php 
+echo "<h3><i>callable type and callback function</i></h3>";
+echo "---------------------------------------------------";
 // вызов в аргументе функций и анонимных функций 
 // callbacks
 // анонимная функция - т,е без имени
@@ -125,3 +127,73 @@ function test_my_func($func)
 
 // test_my_func($extreme);
 
+/*101010101001001001001010100100101001001001010010101001010010100100010010100010110001001*/
+
+class ObjectTestReadyMethod
+{
+	public function testMethod()
+	{
+		echo "hello it`s test method";
+	}
+}
+
+function processCallback(callable $callback)
+{
+	$callback();
+}
+
+$obj1 = new ObjectTestReadyMethod;
+processCallback([$obj1, 'testMethod']);
+
+
+/*пример сортировки c испльзованием callable*/
+function customSort($a, $b)
+{
+	return $a - $b;
+}
+
+$numbers = [4,3,1,7,-20,2];
+echo "<br>сортировка чисел<br>";
+print_r($numbers);
+echo "<br>";
+/*use callback function*/
+usort($numbers, 'customSort');
+echo "<pre>";
+print_r($numbers);
+echo "</pre>";
+echo "<br>";
+
+/*===================================================*/
+/*дальше - callback для обработки элементов массива*/
+
+function uppercase($val)
+{
+	return strtoupper($val);
+}
+
+echo "<br>Сортировка Имен преобразоване в Высокий регистор<br>";
+$names = ['Slavik', 'Johg', 'Michael'];
+$nameUppercase = array_map('uppercase', $names);
+print_r($nameUppercase);
+/*--------------------------------------------------*/
+/*фильтрация массива*/
+function isEven($val)
+{
+	return $val % 2 === 0;
+}
+
+function isResult($val)
+{return $val;}
+
+/*arr*/
+$nubmers_1 = [1,2,3,4,5,6,7,8];
+$strpage = ['home', 'quiq', 'singIn', 'reg-in'];
+/*push*/
+$evenNumbers = array_filter($nubmers_1, 'isEven');
+/*$evenPage = array_filter($strpage, 'isResult', ARRAY_FILTER_USE_KEY);*/
+$evenPage = array_filter($strpage, 'isResult', ARRAY_FILTER_USE_BOTH );
+/*res*/
+echo "<br>";
+print_r($evenNumbers);
+echo "<br>";
+print_r($evenPage);
