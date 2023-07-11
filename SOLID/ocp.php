@@ -88,3 +88,99 @@ class Triangle implements Shape
 Мы можем использовать AreaCalculator для вычисления площади для всех видов фигур, не изменяя код класса AreaCalculator. Это демонстрирует принцип открытости/закрытости (OCP) в действии, так как мы можем расширять функциональность системы, добавляя новые классы, не затрагивая уже существующий код.
 */
 
+/*========================================*/
+/*
+ты не трогаешь этот класс ты его просто расширяешь или наследуешь или меняешь но только его поведение
+для изменения он закрыт - но ты можешь его расширить
+*/
+abstract class Storm
+{
+    abstract public function xp();
+}
+
+class Sound extends Storm
+{
+	private $music; 
+
+	public function startModule($molude)
+	{
+		$this->music = $molude;
+	}
+
+	public function soundXp()
+	{
+		return $res = $this->music;
+	}
+
+	public function xp()
+	{
+		echo "this is autoCar sound club";
+	}
+
+}
+
+
+class Person extends Storm
+{
+	private $xp = "100";
+
+	public function __construct()
+	{
+		$this->xp($this->xp);
+	}
+
+	public function xp()
+	{
+		echo $this->xp;
+	}
+
+}
+/*
+$sound = new Sound;
+$person = new Person();*/
+/*$sound->xp();
+echo "<br>";
+$sound->startModule("включение realteck");
+echo $sound->soundXp();*/
+
+
+abstract class Sp
+{
+	abstract public function calculateArea();
+}
+
+class Reactangle2 extends Sp
+{
+	private $width;
+	private $height;
+
+	public function __construct($width, $height)
+	{
+		$this->width = $width;
+		$this->height = $height;
+	}
+
+	public function calculateArea()
+	{
+		return $this->width * $this->height;
+	}
+}
+
+
+class Circle2 extends Sp
+{
+	private $radius;
+
+	public function __construct($radius)
+	{
+		$this->radius = $radius;
+	}
+
+	public function calculateArea()
+	{
+		return pi() * pow($this->radius, 2);
+	}
+}
+
+$circle2 = new Circle2(24);
+echo $circle2->calculateArea();
